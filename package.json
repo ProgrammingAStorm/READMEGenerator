@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ProgrammingAStorm/READMEGenerator/issues"
   },
-  "homepage": "https://github.com/ProgrammingAStorm/READMEGenerator#readme"
+  "homepage": "https://github.com/ProgrammingAStorm/READMEGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
