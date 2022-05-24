@@ -1,6 +1,9 @@
 //External libraries
 const inquirer = require('inquirer'); //Used to prompt the user for input
 
+//Internal libraries
+const generateMarkdown = require('./utils/generateMarkdown'); //Utility function that generates the README
+
 //Questions used in user prompts
 const questions = [
     "Please enter your project's name. (Required)",                      //0
@@ -15,7 +18,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    generateMarkdown(data).then(markdown => {
+        console.log(markdown);
+    })
+}
 
 //Prompts the user for input to be used to populate the README
 function init() {
@@ -151,4 +158,6 @@ function init() {
 
 // Function call to initialize app
 init()
-.then();
+.then(data => {
+    writeToFile('README.md', data);
+});
