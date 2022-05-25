@@ -121,7 +121,7 @@ ${renderLicenseLink(data.license)}
 
 ${data.contribution}
 
-## Testing
+## Tests
 
 ${data.testing}
 
