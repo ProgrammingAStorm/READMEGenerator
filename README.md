@@ -31,7 +31,7 @@ The program will prompt you to answer specific questions, the questions are used
 
 N/A
 
-## Testing
+## Tests
 
 N/A
 
