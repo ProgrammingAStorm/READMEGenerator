@@ -2,7 +2,8 @@
 const inquirer = require('inquirer'); //Used to prompt the user for input
 
 //Internal libraries
-const generateMarkdown = require('./utils/generateMarkdown'); //Utility function that generates the README
+const generateMarkdown = require('./utils/generateMarkdown'); //Generates the README
+const writeFile = require('./utils/writeFile');                //Writes the README to file
 
 //Questions used in user prompts
 const questions = [
@@ -17,11 +18,13 @@ const questions = [
     "Please enter your email address. (Required)",                       //8
 ];
 
-// TODO: Create a function to write README file
+//Generates the README and writes it to README.md
 function writeToFile(fileName, data) {
-    generateMarkdown(data).then(markdown => {
-        console.log(markdown);
-    })
+    generateMarkdown(data)
+    .then(writeFile)
+    .then(
+        console.log('Your README has been created.')
+    )
 }
 
 //Prompts the user for input to be used to populate the README

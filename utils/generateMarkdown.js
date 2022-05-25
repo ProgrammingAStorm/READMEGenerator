@@ -130,6 +130,7 @@ ${data.testing}
 For more information, feel free to contact me:
 
 https://github.com/${data.username}
+
 ${data.email}`;
 }
 
